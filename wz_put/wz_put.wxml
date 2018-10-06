@@ -1,0 +1,9 @@
+<view class="wz_box" style='background-color:{{bg_c}}'>
+  <input bindinput='numberChange' type='number' maxlength='{{putNum}}' value='{{boxCode}}' class='wz_input' bindblur='hideSor' bindfocus='showSor' focus='{{showCursor}}'></input>
+  <view catchtap='showSor' class='wx_input_ul' style='border-color:{{boxr_color}}'>
+    <view data-id='{{index}}' class='wx_input_li {{index == putArr.length -1 ? "" : "border_r"}}' wx:for="{{putArr}}" wx:key="{{index}}" style='height:{{hei}}rpx;line-height:{{hei}}rpx;border-color:{{boxr_color}}'>
+      <text>{{putArr[index] || putArr[index] == 0 ? putArr[index] : ""}}</text>
+      <text class='put_cursor {{showCursor ? (index == boxCode.length ? "put_cursor_show" : (boxCode.length == putArr.length && index == putArr.length -1 ? "put_cursor_show" :"put_cursor_hid")) : "put_cursor_hid"}}' style='background-color:{{cursor_color}}'></text>
+    </view>
+  </view>
+</view>

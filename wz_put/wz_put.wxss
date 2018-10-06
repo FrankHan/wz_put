@@ -1,0 +1,52 @@
+.wz_box {
+  position: relative;
+}
+.wz_input {
+  width: 0;
+  height: 0;
+  min-height: 0;
+}
+.wx_input_ul {
+  padding: 10rpx 0;
+  display: flex;
+  border: 2rpx solid #ccc;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.wx_input_ul::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.border_r {
+  border-right: 2rpx dashed #ccc;
+}
+.wx_input_li {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.put_cursor {
+  display: inline-block;
+  height: 50%;
+  width: 1rpx;
+  background-color: #000;
+}
+.put_cursor_show {
+  animation: cursorShow 1s infinite;
+}
+.put_cursor_hid {
+  opacity: 0;
+}
+@keyframes cursorShow {
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
